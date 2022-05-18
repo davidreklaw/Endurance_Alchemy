@@ -4,4 +4,39 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 1em;
+    background-color: #5D8AA8;
+}
+
+mat-toolbar {
+    background-color: #011627;
+    color: #FDFFFC;
+}
+
+mat-toolbar a {
+    padding: 14px 16px;
+    justify-content: center;
+    font-size: large;
+}
+
+mat-toolbar a:hover {
+    background-color: #5D8AA8;
+    color: #011627;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+button:hover {
+    background-color: #5D8AA8;
+    color: #011627;
+}
+
+button:active {
+    background-color: #5D8AA8;
+    color: #011627;  
+}
+
+.icon-display {
+    transform: scale(1.25);
 }

@@ -3,6 +3,25 @@
     <h1>Endurance Alchemy</h1>
 </div>
 
-<div>
-    <p>navbar works!</p>
-</div>
+<mat-toolbar>
+    <mat-toolbar-row class="nav">
+        <span>
+            <a mat-button [routerLink]=""> Dashboard </a>
+            <a mat-button [routerLink]=""> Roster </a>
+            <a mat-button [routerLink]=""> Build Workout </a>
+            <a mat-button [routerLink]=""> Fitness Calculator </a>
+            <a mat-button [routerLink]=""> Information/Terminology </a>
+            <a mat-button [routerLink]=""> About Us </a>
+            <a mat-button [routerLink]=""> Contact Us </a>
+        </span>
+        <span class="example-spacer"></span>
+        <span>
+            <button mat-icon-button title="Settings">
+                <mat-icon class="icon-display">settings</mat-icon>
+            </button>
+            <button mat-icon-button title="Profile">
+                <mat-icon class="icon-display">person_outline</mat-icon>
+            </button>
+        </span>
+    </mat-toolbar-row>
+</mat-toolbar>
