@@ -19,9 +19,15 @@
             <button mat-icon-button title="Settings">
                 <mat-icon class="icon-display">settings</mat-icon>
             </button>
-            <button mat-icon-button title="Profile">
-                <mat-icon class="icon-display">person_outline</mat-icon>
-            </button>
+            <div class="dropdown">
+                <button mat-icon-button title="Profile" class="dropbtn">
+                    <mat-icon class="icon-display">person_outline</mat-icon>
+                </button>
+                <div class="dropdown-content">
+                    <a>Profile</a>
+                    <a>Sign Out</a>
+                </div>
+            </div>
         </span>
     </mat-toolbar-row>
 </mat-toolbar>
