@@ -1,0 +1,35 @@
+<button
+    title="Add Athlete"
+    mat-raised-button
+    (click)="onCreateAthlete()"
+>
+    Add Athlete
+</button>
+
+<mat-form-field>
+    <mat-label>Search <em></em></mat-label>
+    <input [disabled]="dataSource.data.length == 0"
+            matInput
+            autocomplete="off"
+            id="athlete-search-filter"
+            (keyup)="applyFilter($event)"
+            placeholder="Ex. John"
+            #input>
+</mat-form-field>
+<div>
+    <div class="table-container">
+        <div *ngIf="dataSource.data.length == 0">
+            <div class="placeholder-header">
+                <img
+                    id="placeholder-logo"
+                    src="../../../../../favicon.ico"
+                />
+                <p>There are currently no athletes.</p>
+            </div>
+        </div>
+    </div>
+
+    <table aria-describedby="Athlete Table" [hidden]="dataSource.data.length == 0" mat-table matSort [dataSource]="dataSource">
+
+    </table>
+</div>

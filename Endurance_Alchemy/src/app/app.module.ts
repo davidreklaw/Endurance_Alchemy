@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { CoachModule } from './coach/coach.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatIconModule } from '@angular/material/icon'
-import { MatButtonModule } from '@angular/material/button'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { UtilityComponentsModule } from './utilities/componentes.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { MatButtonModule } from '@angular/material/button'
     MatButtonModule,
     MatIconModule,
     CoachModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    UtilityComponentsModule,
+    CoachModule
   ],
   providers: [],
   bootstrap: [AppComponent]
