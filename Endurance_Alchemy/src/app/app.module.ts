@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { UtilityComponentsModule } from './utilities/componentes.module';
+import { UtilityComponentsModule } from './utilities/components.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,7 @@ import { UtilityComponentsModule } from './utilities/componentes.module';
     MatIconModule,
     CoachModule,
     BrowserAnimationsModule,
-    UtilityComponentsModule,
-    CoachModule
+    UtilityComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,11 +3,11 @@
     mat-raised-button
     (click)="onCreateAthlete()"
 >
-    Add Athlete
+    ADD ATHLETE
 </button>
 
-<mat-form-field>
-    <mat-label>Search <em></em></mat-label>
+<mat-form-field id="coach-desktop-athlete-search" appearance="outline">
+    <mat-label>Search <em class="far fa-search"></em></mat-label>
     <input [disabled]="dataSource.data.length == 0"
             matInput
             autocomplete="off"
@@ -16,7 +16,7 @@
             placeholder="Ex. John"
             #input>
 </mat-form-field>
-<div>
+<div class="component-container mat-elevation-z3">
     <div class="table-container">
         <div *ngIf="dataSource.data.length == 0">
             <div class="placeholder-header">
@@ -25,11 +25,41 @@
                     src="../../../../../favicon.ico"
                 />
                 <p>There are currently no athletes.</p>
+                <p>To get started click the ADD ATHLETE button above.</p>
             </div>
         </div>
+
+        <table aria-describedby="Athlete Table" [hidden]="dataSource.data.length == 0" mat-table matSort [dataSource]="dataSource">
+
+            <ng-container matColumnDef="name">
+                <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+                <td mat-cell title="{{formatName(element['name'])}}"
+                    *matCellDef="let element"
+                    > {{formatName(element['name'])}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="age">
+                <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>Age</th>
+                <td mat-cell title="{{element['age']}}" *matColumnDef="let element"> {{element['age']}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="sex">
+                <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header>Sex</th>
+                <td mat-cell title="{{element['sex']}}" *matColumnDef="let element"> {{element['sex']}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="summary">
+                <th scope="col" mat-header-cell *matHeaderCellDef>Summary</th>
+                <td mat-cell title="Athlete Page"
+                    *matCellDef="let element"
+                >
+                    <em (click)="onAthleteSelected()" class="fad fa-file-alt"></em>
+                </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        </table>
     </div>
-
-    <table aria-describedby="Athlete Table" [hidden]="dataSource.data.length == 0" mat-table matSort [dataSource]="dataSource">
-
-    </table>
 </div>

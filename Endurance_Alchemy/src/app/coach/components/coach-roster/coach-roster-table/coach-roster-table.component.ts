@@ -2,6 +2,19 @@ import { AfterViewInit, Component, EventEmitter, OnDestroy, OnInit, Output, View
 import { MatSort} from '@angular/material/sort';
 import { MatTableDataSource} from '@angular/material/table';
 
+export interface Athlete {
+    name: string;
+    age: number;
+    sex: string;
+}
+
+const ATHLETE_DATA: Athlete[] = [
+    {name: 'SuperDave Sr' , age: 21 , sex: 'Male'},
+    {name: 'SuperDave Jr' , age: 20 , sex: 'Male'},
+    {name: 'SuperDave So' , age: 19 , sex: 'Male'},
+    {name: 'SuperDave Fr' , age: 18 , sex: 'Male'}
+];
+
 @Component({
     selector: 'app-coach-roster-table',
     templateUrl: './coach-roster-table.component.html',
@@ -14,13 +27,13 @@ export class CoachRosterTableComponent implements OnInit, OnDestroy, AfterViewIn
     
     @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-    dataSource = new MatTableDataSource<object>();
-    displayedColumns = [''];
+    dataSource = new MatTableDataSource<Athlete>();
+    displayedColumns = ['name', 'age', 'sex', 'summary'];
 
     constructor() {}
 
     ngOnInit() {
-        
+        this.dataSource = new MatTableDataSource<Athlete>(ATHLETE_DATA);
     }
 
     ngAfterViewInit() {
