@@ -22,10 +22,10 @@ const ATHLETE_DATA: Athlete[] = [
 })
 
 export class CoachRosterTableComponent implements OnInit, OnDestroy, AfterViewInit {
-    @Output() athleteSelected = new EventEmitter<object>();
-    @Output() createAthlete = new EventEmitter();
-    
     @ViewChild(MatSort, { static: true }) sort: MatSort;
+
+    @Output() athleteSelected = new EventEmitter<Athlete>();
+    @Output() createAthlete = new EventEmitter();
 
     dataSource = new MatTableDataSource<Athlete>();
     displayedColumns = ['name', 'age', 'sex', 'summary'];
@@ -34,10 +34,11 @@ export class CoachRosterTableComponent implements OnInit, OnDestroy, AfterViewIn
 
     ngOnInit() {
         this.dataSource = new MatTableDataSource<Athlete>(ATHLETE_DATA);
+        this.dataSource.sort = this.sort;
     }
 
     ngAfterViewInit() {
-        this.dataSource.sort = this.sort;
+ 
     }
 
     onAthleteSelected() {

@@ -1,3 +1,4 @@
+import { AfterViewInit } from "@angular/core";
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
@@ -7,7 +8,7 @@ import { Router } from "@angular/router";
     styleUrls: ['./coach-roster.component.scss'],
 })
 
-export class CoachRosterComponent implements OnInit, OnDestroy {
+export class CoachRosterComponent implements OnInit, OnDestroy, AfterViewInit {
     
     constructor(private router: Router) {
 
@@ -26,6 +27,10 @@ export class CoachRosterComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
+        
+    }
+
+    ngAfterViewInit() {
         
     }
 }

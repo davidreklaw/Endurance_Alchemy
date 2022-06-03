@@ -6,7 +6,17 @@
 <mat-toolbar>
     <mat-toolbar-row class="nav">
         <span>
-            <a mat-button [routerLink]="['/coach/dashboard']" routerLinkActive="active"> Dashboard </a>
+            <a 
+                mat-button 
+                title="Dashboard"
+                [routerLink]="['/coach/dashboard']" 
+                routerLinkActive="active"
+                aria-current="page"
+                aria-selected="true"
+                tabindex="0"
+            > 
+                Dashboard 
+            </a>
             <a mat-button [routerLink]="['/coach/roster']" routerLinkActive="active"> Roster </a>
             <a mat-button [routerLink]="['/coach/workout']" routerLinkActive="active"> Build Workout </a>
             <a mat-button [routerLink]=""> Fitness Calculator </a>

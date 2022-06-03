@@ -18,6 +18,10 @@ import { CoachDashboardComponent } from "./components/coach-dashboard/coach-dash
     imports: [
         UtilityComponentsModule,
         CoachRoutingModule
+    ],
+    exports: [
+        CoachDashboardComponent,
+        CoachComponent
     ]
 })
 export class CoachModule { }

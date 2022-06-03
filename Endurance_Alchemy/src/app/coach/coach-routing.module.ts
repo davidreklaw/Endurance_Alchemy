@@ -10,15 +10,25 @@ const routes: Routes = [
         path: 'coach',
         component: CoachComponent,
         children: [
-            {path: 'dashboard', component: CoachDashboardComponent},
-            {path: 'roster', component: CoachRosterComponent},
-            {path: 'workout', component: CoachWorkoutComponent}
+            { path: '', redirectTo: '/coach/dashboard', pathMatch: 'full'},
+            {
+                path: 'dashboard', 
+                component: CoachDashboardComponent
+            },
+            {
+                path: 'roster', 
+                component: CoachRosterComponent
+            },
+            {
+                path: 'workout', 
+                component: CoachWorkoutComponent
+            }
         ]
     }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
 
