@@ -9,12 +9,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { UtilityComponentsModule } from './utilities/components.module';
+import { CoachComponent } from './coach/coach.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     NavbarComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,7 +23,8 @@ import { UtilityComponentsModule } from './utilities/components.module';
     MatButtonModule,
     MatIconModule,
     BrowserAnimationsModule,
-    UtilityComponentsModule
+    UtilityComponentsModule,
+    CoachComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
