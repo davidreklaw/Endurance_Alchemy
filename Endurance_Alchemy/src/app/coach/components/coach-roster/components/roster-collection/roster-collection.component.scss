@@ -1,0 +1,52 @@
+.component-container {
+  width: 80%;
+}
+
+.table-container {
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+.mat-header-row {
+  background: #13293d;
+}
+
+.place-holder-button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+th {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #819ab7;
+  color: white !important;
+  .fa-hashtag:hover,
+  .fa-arrow-to-bottom:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+#icon-container {
+  width: fit-content !important;
+}
+
+.wordwrap {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.fa-trash-alt {
+    color: red;
+    cursor: pointer;
+}

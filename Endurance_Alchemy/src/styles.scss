@@ -37,3 +37,32 @@ $Endurance_Alchemy-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*
+-----------------------------------------------------
+                      Global
+----------------------------------------------------- */
+
+.page-title {
+  /*margin-left: 15px;*/
+  margin-top: 15px;
+}
+
+.page-container {
+  margin-left: 15px;
+  margin-right: auto;
+}
+
+.placeholder-header {
+  padding-top: 10%;
+  background: white;
+  min-height: 255px;
+  max-height: 500px;
+  text-align: center;
+}
+
+.placeholder-header p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
