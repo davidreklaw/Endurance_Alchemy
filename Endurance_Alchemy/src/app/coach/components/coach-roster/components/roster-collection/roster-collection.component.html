@@ -41,9 +41,9 @@
         <ng-container matColumnDef="actions">
           <th scope="col" mat-header-cell *matHeaderCellDef>Actions</th>
           <td id="icon-container" mat-cell title="User Actions" *matCellDef="let element">
-            <em class="fad fa-file-alt"></em>
-            <em class="fa fa-pencil-square-o"></em>
-            <em class="fa fa-trash"></em>
+            <em class="fa fa-user" title="Profile"></em>
+            <em class="fa fa-pencil-square-o" title="Edit"></em>
+            <em class="fa fa-trash" title="Delete"></em>
           </td>
         </ng-container>
 
@@ -53,6 +53,13 @@
           <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}""</td>
         </tr>
       </table>
+      <mat-paginator #paginator
+        length="50"
+        [pageIndex]="1"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 15, 25, 50]"
+        aria-label="Select Page">
+      </mat-paginator>
     </div>
   </div>
 </div>
