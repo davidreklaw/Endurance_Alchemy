@@ -54,11 +54,9 @@
         </tr>
       </table>
       <mat-paginator #paginator
-        length="50"
-        [pageIndex]="1"
-        [pageSize]="10"
+        [length]="dataSource.data.length"
         [pageSizeOptions]="[5, 10, 15, 25, 50]"
-        aria-label="Select Page">
+        [pageIndex]="1">
       </mat-paginator>
     </div>
   </div>

@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 
 export interface Athlete {
   name: string;
@@ -29,22 +29,18 @@ export class RosterCollectionComponent implements OnInit {
 
   @ViewChild(MatSort, { static: true}) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  dataSource = new MatTableDataSource<Athlete>();
+  
+  dataSource = new MatTableDataSource<Athlete>(ATHLETE_DATA);
   displayedColumns = ['name', 'age', 'sex', 'actions'];
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.dataSource.data = ATHLETE_DATA;
-    this.dataSource.paginator = this.dataSource.paginator;
+    this.cdr.detectChanges();
+    this.dataSource.paginator = this.paginator;
   }
 
   applyFilter() {
     
-  }
-
-  onChangePage(pe:PageEvent) {
-    console.log(pe.pageIndex);
-    console.log(pe.pageSize);
   }
 }
