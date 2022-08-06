@@ -26,18 +26,20 @@ const ATHLETE_DATA: Athlete[] = [
   styleUrls: ['./roster-collection.component.scss']
 })
 export class RosterCollectionComponent implements OnInit {
-
-  @ViewChild(MatSort, { static: true}) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
   
   dataSource = new MatTableDataSource<Athlete>(ATHLETE_DATA);
   displayedColumns = ['name', 'age', 'sex', 'actions'];
+
+  
+  @ViewChild(MatSort, { static: true}) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.cdr.detectChanges();
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   applyFilter(event: Event) {
