@@ -3,7 +3,7 @@
     <mat-label>Search Athletes</mat-label>
     <input matInput 
           [disabled]="dataSource.data.length == 0"
-          (keyup)="applyFilter()"
+          (keyup)="applyFilter($event)"
           id="athlete-search-filter"
           placeholder="Ex. John"
           #input>
