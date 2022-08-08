@@ -1,0 +1,78 @@
+<form>
+  <div class="form-header">
+    <div class="page-title">
+      <h1>Calculate Your Running Pace</h1>
+    </div>
+    
+    <p>Enter any two categories to begin.</p>
+  </div>
+  <div class="control-group">
+    <div class="control-label">
+      <label>Time</label>
+    </div>
+    <div class="controls">
+      <label>
+        <input type="number" placeholder="Hrs" min="0" max="59"/>
+        :
+      </label>
+      <label>
+        <input type="number" placeholder="Min" min="0" max="59"/>
+        :
+      </label>
+      <label>
+        <input type="number" placeholder="Sec" min="0" max="59"/>
+      </label>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <div class="control-label">
+      <label>Distance</label>
+    </div>
+    <div class="control">
+      <label>
+        <input type="number" min="0" style="width: 43%; margin-right: 13px;"/>
+      </label>
+      <select>
+        <option>Kilometers</option>
+        <option>Miles</option>
+        <option>Meters</option>
+        <option>Yards</option>
+        <option>---------------</option>
+        <option>Marathon</option>
+        <option>Half-Marathon</option>
+        <option>10k</option>
+        <option>5k</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <div class="control-label">
+      <label>Pace</label>
+    </div>
+  
+    <div class="controls">
+      <label>
+        <input type="number" placeholder="Hrs" min="0" max="59"/>
+        :
+      </label>
+      <label>
+        <input type="number" placeholder="Min" min="0" max="59"/>
+        :
+      </label>
+      <label>
+        <input type="number" placeholder="Sec" min="0" max="59"/>
+      </label>
+      <select style="margin-left: 10px">
+        <option>Per Kilometer</option>
+        <option>Per Mile</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="form-buttons">
+    <button mat-button class="form-buttons">Reset</button>
+    <button mat-button class="form-buttons">Calculate</button>
+  </div>
+</form>

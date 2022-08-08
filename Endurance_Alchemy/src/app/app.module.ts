@@ -6,11 +6,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UtilityComponentsModule } from './utilities/components.module';
 import { CoachModule } from './coach/coach.module';
+import { PaceCalculatorComponent } from './pace-calculator/pace-calculator.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    PaceCalculatorComponent
    ],
   imports: [
     BrowserModule,
