@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UtilityComponentsModule } from './utilities/components.module';
 import { CoachModule } from './coach/coach.module';
 import { PaceCalculatorComponent } from './pace-calculator/pace-calculator.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     NavbarComponent,
-    PaceCalculatorComponent
+    PaceCalculatorComponent,
+    ContactUsComponent
    ],
   imports: [
     BrowserModule,
