@@ -1,31 +1,32 @@
 <h1>Add Athlete</h1>
 
-<div mat-dialog-content>
-  <mat-form-field>
-    <label>First Name: </label>
-    <input placeholder="First Name" type="text"> 
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>First Name: </mat-label>
+    <input matInput placeholder="First Name" type="text"> 
   </mat-form-field>
 
-  <mat-form-field>
-    <label>Last Name: </label>
-    <input placeholder="Last Name" type="text"> 
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name: </mat-label>
+    <input matInput placeholder="Last Name" type="text"> 
   </mat-form-field>
 
-  <mat-form-field>
-    <label>Age: </label>
-    <input placeholder="Age" type="number"> 
+  <mat-form-field appearance="fill">
+    <mat-label>Age: </mat-label>
+    <input matInput placeholder="Age" type="number"> 
   </mat-form-field>
 
-  <mat-form-field>
-    <label>Sex: </label>
-    <select>
-      <option>Male</option>
-      <option>Female</option>
-    </select> 
+  <mat-form-field appearance="fill">
+    <mat-label>Sex: </mat-label>
+    <mat-select>
+      <mat-option>Male</mat-option>
+      <mat-option>Female</mat-option>
+    </mat-select> 
   </mat-form-field>
-</div>
 
-<div mat-dialog-actions>
-  <button mat-raised-button (click)="closeDialog()" color="primary">Cancel</button>
-  <button mat-raised-button color="primary">Add</button>
-</div>
+  <div class="buttons" mat-dialog-actions>
+    <button mat-raised-button (click)="closeDialog()" color="primary">Cancel</button>
+    <button mat-raised-button color="primary">Add</button>
+  </div>
+</form>
+
