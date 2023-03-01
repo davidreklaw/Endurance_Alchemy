@@ -9,7 +9,11 @@ import { ApiClient } from 'src/app/services/api-services/api-client';
 export class PaceCalculatorService {
     constructor(private apiService: ApiClient) {}
 
-    paceCalculate: (request: any) =>
+    calculatePace: (request: any) =>
         Observable<any> = (request) =>
         this.apiService.post<any, any>('api/', request)
+
+    calculateTime(request: any) {
+        return this.apiService.post<any, any>('api/', request);
+    }
 }
