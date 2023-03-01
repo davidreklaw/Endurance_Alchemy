@@ -8,6 +8,7 @@ import { UtilityComponentsModule } from './utilities/components.module';
 import { CoachModule } from './coach/coach.module';
 import { PaceCalculatorComponent } from './pace-calculator/pace-calculator.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [			
@@ -21,7 +22,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     UtilityComponentsModule,
-    CoachModule
+    CoachModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

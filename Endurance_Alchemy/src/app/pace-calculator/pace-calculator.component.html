@@ -12,15 +12,15 @@
     </div>
     <div class="controls">
       <label>
-        <input type="number" placeholder="Hrs" min="0" max="59"/>
+        <input [formControl]="timeHour" type="number" placeholder="Hrs" min="0" max="59"/>
         :
       </label>
       <label>
-        <input type="number" placeholder="Min" min="0" max="59"/>
+        <input [formControl]="timeMinute" type="number" placeholder="Min" min="0" max="59"/>
         :
       </label>
       <label>
-        <input type="number" placeholder="Sec" min="0" max="59"/>
+        <input [formControl]="timeSecond" type="number" placeholder="Sec" min="0" max="59"/>
       </label>
     </div>
   </div>
@@ -31,9 +31,9 @@
     </div>
     <div class="control">
       <label>
-        <input type="number" min="0" style="width: 43%; margin-right: 13px;"/>
+        <input [formControl]="distance" type="number" min="0" style="width: 43%; margin-right: 13px;"/>
       </label>
-      <select>
+      <select [formControl]="distanceType">
         <option>Kilometers</option>
         <option>Miles</option>
         <option>Meters</option>
@@ -54,17 +54,17 @@
   
     <div class="controls">
       <label>
-        <input type="number" placeholder="Hrs" min="0" max="59"/>
+        <input [formControl]="paceHour" type="number" placeholder="Hrs" min="0" max="59"/>
         :
       </label>
       <label>
-        <input type="number" placeholder="Min" min="0" max="59"/>
+        <input [formControl]="paceMinute" type="number" placeholder="Min" min="0" max="59"/>
         :
       </label>
       <label>
-        <input type="number" placeholder="Sec" min="0" max="59"/>
+        <input [formControl]="paceSecond" type="number" placeholder="Sec" min="0" max="59"/>
       </label>
-      <select style="margin-left: 10px">
+      <select [formControl]="paceType" style="margin-left: 10px">
         <option>Per Kilometer</option>
         <option>Per Mile</option>
       </select>
