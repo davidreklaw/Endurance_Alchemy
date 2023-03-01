@@ -7,5 +7,5 @@ export interface PaceCalculatorPaceRequest {
     timeSecond: number;
     distance: number;
     distanceType: DistanceType;
-    paceType: PaceType
+    paceType: PaceType;
 }
