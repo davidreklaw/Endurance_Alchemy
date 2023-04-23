@@ -5,6 +5,7 @@ import { AboutUsComponent } from "./components/about-us/about-us.component";
 import { FitnessCalculatorComponent } from "./components/fitness-calculator/fitness-calculator.component";
 import { InfoTermComponent } from "./components/info-term/info-term.component";
 import { WorkoutBuilderComponent } from "./components/workout-builder/workout-builder.component";
+import { SettingsComponent } from "./components/settings/settings.component";
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path: 'workout-builder',
         component: WorkoutBuilderComponent
+    },
+    {
+        path: 'settings',
+        component: SettingsComponent
     }
 ];
 
