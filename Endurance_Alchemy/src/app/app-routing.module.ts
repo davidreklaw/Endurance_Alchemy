@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CoachComponent } from './coach/coach.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactUsComponent } from './utilities/components/contact-us/contact-us.component';
 import { PaceCalculatorComponent } from './pace-calculator/pace-calculator.component';
 
 const routes: Routes = [
