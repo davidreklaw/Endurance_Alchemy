@@ -12,10 +12,23 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSelectModule } from "@angular/material/select";
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 import { ComponentRoutingModule } from "./components-routing.module";
+import { AboutUsComponent } from "./components/about-us/about-us.component";
+import { ContactUsComponent } from "./components/contact-us/contact-us.component";
+import { FitnessCalculatorComponent } from "./components/fitness-calculator/fitness-calculator.component";
+import { InfoTermComponent } from "./components/info-term/info-term.component";
+import { SettingsComponent } from "./components/settings/settings.component";
+import { UserProfileComponent } from "./components/user-profile/user-profile.component";
+import { WorkoutBuilderComponent } from "./components/workout-builder/workout-builder.component";
 
 @NgModule({
     declarations: [
-
+        AboutUsComponent,
+        ContactUsComponent,
+        FitnessCalculatorComponent,
+        InfoTermComponent,
+        SettingsComponent,
+        UserProfileComponent,
+        WorkoutBuilderComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -43,6 +56,13 @@ import { ComponentRoutingModule } from "./components-routing.module";
         MatPaginatorModule,
         MatSortModule,
         MatSelectModule,
+        AboutUsComponent,
+        ContactUsComponent,
+        FitnessCalculatorComponent,
+        InfoTermComponent,
+        SettingsComponent,
+        UserProfileComponent,
+        WorkoutBuilderComponent
     ]
 })
 
