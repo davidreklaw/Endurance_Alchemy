@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { PaceCalculatorService } from './services/pace-calculator.service';
-import { PaceCalculatorPaceRequest } from './services/api-data-contracts/pace-calculator-pace/pace-calculator-pace-request';
 import { PaceCalculator } from './store/model/pace-calculator.model';
 
 @Component({
@@ -23,7 +21,6 @@ export class PaceCalculatorComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private service: PaceCalculatorService
   ) { }
 
   ngOnInit() {
@@ -56,13 +53,6 @@ export class PaceCalculatorComponent implements OnInit {
       paceMinute: this.paceMinute,
       paceSecond: this.paceSecond,
       paceType: this.paceType
-    }
-
-    if (this.paceHour.value == null) {
-      this.service.calculatePace(new PaceCalculator()).subscribe();
-    }
-    else {
-      this.service.calculateTime(new PaceCalculator()).subscribe();
     }
   }
 }

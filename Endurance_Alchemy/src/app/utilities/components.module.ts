@@ -11,6 +11,7 @@ import { MatSortModule } from "@angular/material/sort";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSelectModule } from "@angular/material/select";
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
+import { ComponentRoutingModule } from "./components-routing.module";
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { MatDialog, MatDialogModule } from "@angular/material/dialog";
         MatPaginatorModule,
         MatSortModule,
         MatSelectModule,
-        MatDialogModule
+        MatDialogModule,
+        ComponentRoutingModule
     ],
     exports: [
         BrowserAnimationsModule,
@@ -40,7 +42,7 @@ import { MatDialog, MatDialogModule } from "@angular/material/dialog";
         MatIconModule,
         MatPaginatorModule,
         MatSortModule,
-        MatSelectModule
+        MatSelectModule,
     ]
 })
 
